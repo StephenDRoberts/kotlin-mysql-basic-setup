@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+
+  mysql:
+    image: mysql
+    command: --default-authentication-plugin=caching_sha2_password
+    restart: always
+    environment:
+      MYSQL_DATABASE: test-db
+      MYSQL_ROOT_PASSWORD: ${MYSQL_DEMO_PASSWORD}
+    ports:
+      - "8000:3306"

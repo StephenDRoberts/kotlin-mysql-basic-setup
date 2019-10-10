@@ -1,0 +1,12 @@
+database:
+  host: jdbc:mysql://${database.ip}:8000
+  ip: localhost
+  name: test-db
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: ${MYSQL_DEMO_PASSWORD}
+    url: ${database.host}/${database.name}?UseUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+
